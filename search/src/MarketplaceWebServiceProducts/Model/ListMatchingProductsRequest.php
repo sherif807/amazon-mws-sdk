@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest
@@ -29,68 +31,67 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <ul>
  * 
  * <li>SellerId: string</li>
+ * <li>MWSAuthToken: string</li>
  * <li>MarketplaceId: string</li>
  * <li>Query: string</li>
  * <li>QueryContextId: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>SellerId: string</li>
-     * <li>MarketplaceId: string</li>
-     * <li>Query: string</li>
-     * <li>QueryContextId: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'Query' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'QueryContextId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'MWSAuthToken' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Query' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'QueryContextId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the SellerId property.
-     * 
-     * @return string SellerId
+    /**
+     * Get the value of the SellerId property.
+     *
+     * @return String SellerId.
      */
-    public function getSellerId() 
+    public function getSellerId()
     {
         return $this->_fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerId property.
-     * 
-     * @param string SellerId
+     * Set the value of the SellerId property.
+     *
+     * @param string sellerId
      * @return this instance
      */
-    public function setSellerId($value) 
+    public function setSellerId($value)
     {
         $this->_fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerId and returns this instance
-     * 
-     * @param string $value SellerId
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest instance
+     * Check to see if SellerId is set.
+     *
+     * @return true if SellerId is set.
+     */
+    public function isSetSellerId()
+    {
+                return !is_null($this->_fields['SellerId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerId, return this.
+     *
+     * @param sellerId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerId($value)
     {
@@ -98,44 +99,91 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest extends Ma
         return $this;
     }
 
-
     /**
-     * Checks if SellerId is set
-     * 
-     * @return bool true if SellerId  is set
+     * Get the value of the MWSAuthToken property.
+     *
+     * @return String MWSAuthToken.
      */
-    public function isSetSellerId()
+    public function getMWSAuthToken()
     {
-        return !is_null($this->_fields['SellerId']['FieldValue']);
+        return $this->_fields['MWSAuthToken']['FieldValue'];
     }
 
     /**
-     * Gets the value of the MarketplaceId property.
-     * 
-     * @return string MarketplaceId
+     * Set the value of the MWSAuthToken property.
+     *
+     * @param string mwsAuthToken
+     * @return this instance
      */
-    public function getMarketplaceId() 
+    public function setMWSAuthToken($value)
+    {
+        $this->_fields['MWSAuthToken']['FieldValue'] = $value;
+        return $this;
+    }
+
+    /**
+     * Check to see if MWSAuthToken is set.
+     *
+     * @return true if MWSAuthToken is set.
+     */
+    public function isSetMWSAuthToken()
+    {
+                return !is_null($this->_fields['MWSAuthToken']['FieldValue']);
+            }
+
+    /**
+     * Set the value of MWSAuthToken, return this.
+     *
+     * @param mwsAuthToken
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withMWSAuthToken($value)
+    {
+        $this->setMWSAuthToken($value);
+        return $this;
+    }
+
+    /**
+     * Get the value of the MarketplaceId property.
+     *
+     * @return String MarketplaceId.
+     */
+    public function getMarketplaceId()
     {
         return $this->_fields['MarketplaceId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the MarketplaceId property.
-     * 
-     * @param string MarketplaceId
+     * Set the value of the MarketplaceId property.
+     *
+     * @param string marketplaceId
      * @return this instance
      */
-    public function setMarketplaceId($value) 
+    public function setMarketplaceId($value)
     {
         $this->_fields['MarketplaceId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the MarketplaceId and returns this instance
-     * 
-     * @param string $value MarketplaceId
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest instance
+     * Check to see if MarketplaceId is set.
+     *
+     * @return true if MarketplaceId is set.
+     */
+    public function isSetMarketplaceId()
+    {
+                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of MarketplaceId, return this.
+     *
+     * @param marketplaceId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withMarketplaceId($value)
     {
@@ -143,44 +191,45 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest extends Ma
         return $this;
     }
 
-
     /**
-     * Checks if MarketplaceId is set
-     * 
-     * @return bool true if MarketplaceId  is set
+     * Get the value of the Query property.
+     *
+     * @return String Query.
      */
-    public function isSetMarketplaceId()
-    {
-        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the Query property.
-     * 
-     * @return string Query
-     */
-    public function getQuery() 
+    public function getQuery()
     {
         return $this->_fields['Query']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Query property.
-     * 
-     * @param string Query
+     * Set the value of the Query property.
+     *
+     * @param string query
      * @return this instance
      */
-    public function setQuery($value) 
+    public function setQuery($value)
     {
         $this->_fields['Query']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the Query and returns this instance
-     * 
-     * @param string $value Query
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest instance
+     * Check to see if Query is set.
+     *
+     * @return true if Query is set.
+     */
+    public function isSetQuery()
+    {
+                return !is_null($this->_fields['Query']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Query, return this.
+     *
+     * @param query
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withQuery($value)
     {
@@ -188,63 +237,50 @@ class MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest extends Ma
         return $this;
     }
 
-
     /**
-     * Checks if Query is set
-     * 
-     * @return bool true if Query  is set
+     * Get the value of the QueryContextId property.
+     *
+     * @return String QueryContextId.
      */
-    public function isSetQuery()
-    {
-        return !is_null($this->_fields['Query']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the QueryContextId property.
-     * 
-     * @return string QueryContextId
-     */
-    public function getQueryContextId() 
+    public function getQueryContextId()
     {
         return $this->_fields['QueryContextId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the QueryContextId property.
-     * 
-     * @param string QueryContextId
+     * Set the value of the QueryContextId property.
+     *
+     * @param string queryContextId
      * @return this instance
      */
-    public function setQueryContextId($value) 
+    public function setQueryContextId($value)
     {
         $this->_fields['QueryContextId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the QueryContextId and returns this instance
-     * 
-     * @param string $value QueryContextId
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsRequest instance
+     * Check to see if QueryContextId is set.
+     *
+     * @return true if QueryContextId is set.
+     */
+    public function isSetQueryContextId()
+    {
+                return !is_null($this->_fields['QueryContextId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of QueryContextId, return this.
+     *
+     * @param queryContextId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withQueryContextId($value)
     {
         $this->setQueryContextId($value);
         return $this;
     }
-
-
-    /**
-     * Checks if QueryContextId is set
-     * 
-     * @return bool true if QueryContextId  is set
-     */
-    public function isSetQueryContextId()
-    {
-        return !is_null($this->_fields['QueryContextId']['FieldValue']);
-    }
-
-
-
 
 }

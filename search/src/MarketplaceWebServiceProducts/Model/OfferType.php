@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_OfferType
@@ -37,73 +39,63 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>SellerSKU: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_OfferType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>BuyingPrice: MarketplaceWebServiceProducts_Model_PriceType</li>
-     * <li>RegularPrice: MarketplaceWebServiceProducts_Model_MoneyType</li>
-     * <li>FulfillmentChannel: string</li>
-     * <li>ItemCondition: string</li>
-     * <li>ItemSubCondition: string</li>
-     * <li>SellerId: string</li>
-     * <li>SellerSKU: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-
-        'BuyingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
-
-
-        'RegularPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-
-        'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ItemSubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'BuyingPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
+    'RegularPrice' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'ItemSubCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the BuyingPrice.
-     * 
-     * @return PriceType BuyingPrice
+    /**
+     * Get the value of the BuyingPrice property.
+     *
+     * @return PriceType BuyingPrice.
      */
-    public function getBuyingPrice() 
+    public function getBuyingPrice()
     {
         return $this->_fields['BuyingPrice']['FieldValue'];
     }
 
     /**
-     * Sets the value of the BuyingPrice.
-     * 
-     * @param PriceType BuyingPrice
-     * @return void
+     * Set the value of the BuyingPrice property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_PriceType buyingPrice
+     * @return this instance
      */
-    public function setBuyingPrice($value) 
+    public function setBuyingPrice($value)
     {
         $this->_fields['BuyingPrice']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the BuyingPrice  and returns this instance
-     * 
-     * @param PriceType $value BuyingPrice
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if BuyingPrice is set.
+     *
+     * @return true if BuyingPrice is set.
+     */
+    public function isSetBuyingPrice()
+    {
+                return !is_null($this->_fields['BuyingPrice']['FieldValue']);
+            }
+
+    /**
+     * Set the value of BuyingPrice, return this.
+     *
+     * @param buyingPrice
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withBuyingPrice($value)
     {
@@ -111,45 +103,45 @@ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
-     * Checks if BuyingPrice  is set
-     * 
-     * @return bool true if BuyingPrice property is set
+     * Get the value of the RegularPrice property.
+     *
+     * @return MoneyType RegularPrice.
      */
-    public function isSetBuyingPrice()
-    {
-        return !is_null($this->_fields['BuyingPrice']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the RegularPrice.
-     * 
-     * @return MoneyType RegularPrice
-     */
-    public function getRegularPrice() 
+    public function getRegularPrice()
     {
         return $this->_fields['RegularPrice']['FieldValue'];
     }
 
     /**
-     * Sets the value of the RegularPrice.
-     * 
-     * @param MoneyType RegularPrice
-     * @return void
+     * Set the value of the RegularPrice property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_MoneyType regularPrice
+     * @return this instance
      */
-    public function setRegularPrice($value) 
+    public function setRegularPrice($value)
     {
         $this->_fields['RegularPrice']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the RegularPrice  and returns this instance
-     * 
-     * @param MoneyType $value RegularPrice
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if RegularPrice is set.
+     *
+     * @return true if RegularPrice is set.
+     */
+    public function isSetRegularPrice()
+    {
+                return !is_null($this->_fields['RegularPrice']['FieldValue']);
+            }
+
+    /**
+     * Set the value of RegularPrice, return this.
+     *
+     * @param regularPrice
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withRegularPrice($value)
     {
@@ -157,45 +149,45 @@ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
-     * Checks if RegularPrice  is set
-     * 
-     * @return bool true if RegularPrice property is set
+     * Get the value of the FulfillmentChannel property.
+     *
+     * @return String FulfillmentChannel.
      */
-    public function isSetRegularPrice()
-    {
-        return !is_null($this->_fields['RegularPrice']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the FulfillmentChannel property.
-     * 
-     * @return string FulfillmentChannel
-     */
-    public function getFulfillmentChannel() 
+    public function getFulfillmentChannel()
     {
         return $this->_fields['FulfillmentChannel']['FieldValue'];
     }
 
     /**
-     * Sets the value of the FulfillmentChannel property.
-     * 
-     * @param string FulfillmentChannel
+     * Set the value of the FulfillmentChannel property.
+     *
+     * @param string fulfillmentChannel
      * @return this instance
      */
-    public function setFulfillmentChannel($value) 
+    public function setFulfillmentChannel($value)
     {
         $this->_fields['FulfillmentChannel']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the FulfillmentChannel and returns this instance
-     * 
-     * @param string $value FulfillmentChannel
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if FulfillmentChannel is set.
+     *
+     * @return true if FulfillmentChannel is set.
+     */
+    public function isSetFulfillmentChannel()
+    {
+                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+            }
+
+    /**
+     * Set the value of FulfillmentChannel, return this.
+     *
+     * @param fulfillmentChannel
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withFulfillmentChannel($value)
     {
@@ -203,44 +195,45 @@ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
-     * Checks if FulfillmentChannel is set
-     * 
-     * @return bool true if FulfillmentChannel  is set
+     * Get the value of the ItemCondition property.
+     *
+     * @return String ItemCondition.
      */
-    public function isSetFulfillmentChannel()
-    {
-        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the ItemCondition property.
-     * 
-     * @return string ItemCondition
-     */
-    public function getItemCondition() 
+    public function getItemCondition()
     {
         return $this->_fields['ItemCondition']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ItemCondition property.
-     * 
-     * @param string ItemCondition
+     * Set the value of the ItemCondition property.
+     *
+     * @param string itemCondition
      * @return this instance
      */
-    public function setItemCondition($value) 
+    public function setItemCondition($value)
     {
         $this->_fields['ItemCondition']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the ItemCondition and returns this instance
-     * 
-     * @param string $value ItemCondition
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if ItemCondition is set.
+     *
+     * @return true if ItemCondition is set.
+     */
+    public function isSetItemCondition()
+    {
+                return !is_null($this->_fields['ItemCondition']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ItemCondition, return this.
+     *
+     * @param itemCondition
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withItemCondition($value)
     {
@@ -248,44 +241,45 @@ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
-     * Checks if ItemCondition is set
-     * 
-     * @return bool true if ItemCondition  is set
+     * Get the value of the ItemSubCondition property.
+     *
+     * @return String ItemSubCondition.
      */
-    public function isSetItemCondition()
-    {
-        return !is_null($this->_fields['ItemCondition']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the ItemSubCondition property.
-     * 
-     * @return string ItemSubCondition
-     */
-    public function getItemSubCondition() 
+    public function getItemSubCondition()
     {
         return $this->_fields['ItemSubCondition']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ItemSubCondition property.
-     * 
-     * @param string ItemSubCondition
+     * Set the value of the ItemSubCondition property.
+     *
+     * @param string itemSubCondition
      * @return this instance
      */
-    public function setItemSubCondition($value) 
+    public function setItemSubCondition($value)
     {
         $this->_fields['ItemSubCondition']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the ItemSubCondition and returns this instance
-     * 
-     * @param string $value ItemSubCondition
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if ItemSubCondition is set.
+     *
+     * @return true if ItemSubCondition is set.
+     */
+    public function isSetItemSubCondition()
+    {
+                return !is_null($this->_fields['ItemSubCondition']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ItemSubCondition, return this.
+     *
+     * @param itemSubCondition
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withItemSubCondition($value)
     {
@@ -293,44 +287,45 @@ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
-     * Checks if ItemSubCondition is set
-     * 
-     * @return bool true if ItemSubCondition  is set
+     * Get the value of the SellerId property.
+     *
+     * @return String SellerId.
      */
-    public function isSetItemSubCondition()
-    {
-        return !is_null($this->_fields['ItemSubCondition']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the SellerId property.
-     * 
-     * @return string SellerId
-     */
-    public function getSellerId() 
+    public function getSellerId()
     {
         return $this->_fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerId property.
-     * 
-     * @param string SellerId
+     * Set the value of the SellerId property.
+     *
+     * @param string sellerId
      * @return this instance
      */
-    public function setSellerId($value) 
+    public function setSellerId($value)
     {
         $this->_fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerId and returns this instance
-     * 
-     * @param string $value SellerId
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if SellerId is set.
+     *
+     * @return true if SellerId is set.
+     */
+    public function isSetSellerId()
+    {
+                return !is_null($this->_fields['SellerId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerId, return this.
+     *
+     * @param sellerId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerId($value)
     {
@@ -338,63 +333,50 @@ class MarketplaceWebServiceProducts_Model_OfferType extends MarketplaceWebServic
         return $this;
     }
 
-
     /**
-     * Checks if SellerId is set
-     * 
-     * @return bool true if SellerId  is set
+     * Get the value of the SellerSKU property.
+     *
+     * @return String SellerSKU.
      */
-    public function isSetSellerId()
-    {
-        return !is_null($this->_fields['SellerId']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the SellerSKU property.
-     * 
-     * @return string SellerSKU
-     */
-    public function getSellerSKU() 
+    public function getSellerSKU()
     {
         return $this->_fields['SellerSKU']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerSKU property.
-     * 
-     * @param string SellerSKU
+     * Set the value of the SellerSKU property.
+     *
+     * @param string sellerSKU
      * @return this instance
      */
-    public function setSellerSKU($value) 
+    public function setSellerSKU($value)
     {
         $this->_fields['SellerSKU']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerSKU and returns this instance
-     * 
-     * @param string $value SellerSKU
-     * @return MarketplaceWebServiceProducts_Model_OfferType instance
+     * Check to see if SellerSKU is set.
+     *
+     * @return true if SellerSKU is set.
+     */
+    public function isSetSellerSKU()
+    {
+                return !is_null($this->_fields['SellerSKU']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerSKU, return this.
+     *
+     * @param sellerSKU
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerSKU($value)
     {
         $this->setSellerSKU($value);
         return $this;
     }
-
-
-    /**
-     * Checks if SellerSKU is set
-     * 
-     * @return bool true if SellerSKU  is set
-     */
-    public function isSetSellerSKU()
-    {
-        return !is_null($this->_fields['SellerSKU']['FieldValue']);
-    }
-
-
-
 
 }

@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_SellerSKUIdentifier
@@ -33,61 +35,59 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>SellerSKU: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_SellerSKUIdentifier extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_SellerSKUIdentifier
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>MarketplaceId: string</li>
-     * <li>SellerId: string</li>
-     * <li>SellerSKU: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_SellerSKUIdentifier extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'MarketplaceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'SellerId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the MarketplaceId property.
-     * 
-     * @return string MarketplaceId
+    /**
+     * Get the value of the MarketplaceId property.
+     *
+     * @return String MarketplaceId.
      */
-    public function getMarketplaceId() 
+    public function getMarketplaceId()
     {
         return $this->_fields['MarketplaceId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the MarketplaceId property.
-     * 
-     * @param string MarketplaceId
+     * Set the value of the MarketplaceId property.
+     *
+     * @param string marketplaceId
      * @return this instance
      */
-    public function setMarketplaceId($value) 
+    public function setMarketplaceId($value)
     {
         $this->_fields['MarketplaceId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the MarketplaceId and returns this instance
-     * 
-     * @param string $value MarketplaceId
-     * @return MarketplaceWebServiceProducts_Model_SellerSKUIdentifier instance
+     * Check to see if MarketplaceId is set.
+     *
+     * @return true if MarketplaceId is set.
+     */
+    public function isSetMarketplaceId()
+    {
+                return !is_null($this->_fields['MarketplaceId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of MarketplaceId, return this.
+     *
+     * @param marketplaceId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withMarketplaceId($value)
     {
@@ -95,44 +95,45 @@ class MarketplaceWebServiceProducts_Model_SellerSKUIdentifier extends Marketplac
         return $this;
     }
 
-
     /**
-     * Checks if MarketplaceId is set
-     * 
-     * @return bool true if MarketplaceId  is set
+     * Get the value of the SellerId property.
+     *
+     * @return String SellerId.
      */
-    public function isSetMarketplaceId()
-    {
-        return !is_null($this->_fields['MarketplaceId']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the SellerId property.
-     * 
-     * @return string SellerId
-     */
-    public function getSellerId() 
+    public function getSellerId()
     {
         return $this->_fields['SellerId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerId property.
-     * 
-     * @param string SellerId
+     * Set the value of the SellerId property.
+     *
+     * @param string sellerId
      * @return this instance
      */
-    public function setSellerId($value) 
+    public function setSellerId($value)
     {
         $this->_fields['SellerId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerId and returns this instance
-     * 
-     * @param string $value SellerId
-     * @return MarketplaceWebServiceProducts_Model_SellerSKUIdentifier instance
+     * Check to see if SellerId is set.
+     *
+     * @return true if SellerId is set.
+     */
+    public function isSetSellerId()
+    {
+                return !is_null($this->_fields['SellerId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerId, return this.
+     *
+     * @param sellerId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerId($value)
     {
@@ -140,63 +141,50 @@ class MarketplaceWebServiceProducts_Model_SellerSKUIdentifier extends Marketplac
         return $this;
     }
 
-
     /**
-     * Checks if SellerId is set
-     * 
-     * @return bool true if SellerId  is set
+     * Get the value of the SellerSKU property.
+     *
+     * @return String SellerSKU.
      */
-    public function isSetSellerId()
-    {
-        return !is_null($this->_fields['SellerId']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the SellerSKU property.
-     * 
-     * @return string SellerSKU
-     */
-    public function getSellerSKU() 
+    public function getSellerSKU()
     {
         return $this->_fields['SellerSKU']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerSKU property.
-     * 
-     * @param string SellerSKU
+     * Set the value of the SellerSKU property.
+     *
+     * @param string sellerSKU
      * @return this instance
      */
-    public function setSellerSKU($value) 
+    public function setSellerSKU($value)
     {
         $this->_fields['SellerSKU']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerSKU and returns this instance
-     * 
-     * @param string $value SellerSKU
-     * @return MarketplaceWebServiceProducts_Model_SellerSKUIdentifier instance
+     * Check to see if SellerSKU is set.
+     *
+     * @return true if SellerSKU is set.
+     */
+    public function isSetSellerSKU()
+    {
+                return !is_null($this->_fields['SellerSKU']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerSKU, return this.
+     *
+     * @param sellerSKU
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerSKU($value)
     {
         $this->setSellerSKU($value);
         return $this;
     }
-
-
-    /**
-     * Checks if SellerSKU is set
-     * 
-     * @return bool true if SellerSKU  is set
-     */
-    public function isSetSellerSKU()
-    {
-        return !is_null($this->_fields['SellerSKU']['FieldValue']);
-    }
-
-
-
 
 }

@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_OfferListingCountType
@@ -28,121 +30,113 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
+ * <li>Value: int</li>
+ * <li>condition: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_OfferListingCountType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_OfferListingCountType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_OfferListingCountType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-       'Value' => array('FieldValue' => null, 'FieldType' => 'string'),
-       'condition' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Value' => array('FieldValue' => null, 'FieldType' => 'int'),
+    'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
+    );
+    parent::__construct($data);
     }
 
-    
-      /**
-       * Gets the value of the condition attribute.
-       * 
-       * @return string condition
-       */
-      public function getcondition() 
-      {
-          return $this->_fields['condition']['FieldValue'];
-      }
+    /**
+     * Get the value of the Value property.
+     *
+     * @return int Value.
+     */
+    public function getValue()
+    {
+        return $this->_fields['Value']['FieldValue'];
+    }
 
-      /**
-       * Sets the value of the condition property.
-       * 
-       * @param string condition
-       * @return this instance
-       */
-      public function setcondition($value) 
-      {
-          $this->_fields['condition']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of the Value property.
+     *
+     * @param int value
+     * @return this instance
+     */
+    public function setValue($value)
+    {
+        $this->_fields['Value']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Sets the value of the condition and returns this instance
-       * 
-       * @param string $value condition
-       * @return MarketplaceWebServiceProducts_Model_OfferListingCountType instance
-       */
-      public function withcondition($value)
-      {
-          $this->setcondition($value);
-          return $this;
-      }
+    /**
+     * Check to see if Value is set.
+     *
+     * @return true if Value is set.
+     */
+    public function isSetValue()
+    {
+                return !is_null($this->_fields['Value']['FieldValue']);
+            }
 
+    /**
+     * Set the value of Value, return this.
+     *
+     * @param value
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withValue($value)
+    {
+        $this->setValue($value);
+        return $this;
+    }
 
-      /**
-       * Checks if condition is set
-       * 
-       * @return bool true if condition  is set
-       */
-      public function isSetcondition()
-      {
-          return !is_null($this->_fields['condition']['FieldValue']);
-      }
-      /**
-       * Gets the value of the Value attribute.
-       * 
-       * @return string Value
-       */
-      public function getValue() 
-      {
-          return $this->_fields['Value']['FieldValue'];
-      }
+    /**
+     * Get the value of the condition property.
+     *
+     * @return String condition.
+     */
+    public function getcondition()
+    {
+        return $this->_fields['condition']['FieldValue'];
+    }
 
-      /**
-       * Sets the value of the Value property.
-       * 
-       * @param string Value
-       * @return this instance
-       */
-      public function setValue($value) 
-      {
-          $this->_fields['Value']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of the condition property.
+     *
+     * @param string condition
+     * @return this instance
+     */
+    public function setcondition($value)
+    {
+        $this->_fields['condition']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Sets the value of the Value and returns this instance
-       * 
-       * @param string $value Value
-       * @return MarketplaceWebServiceProducts_Model_OfferListingCountType instance
-       */
-      public function withValue($value)
-      {
-          $this->setValue($value);
-          return $this;
-      }
+    /**
+     * Check to see if condition is set.
+     *
+     * @return true if condition is set.
+     */
+    public function isSetcondition()
+    {
+                return !is_null($this->_fields['condition']['FieldValue']);
+            }
 
-
-      /**
-       * Checks if Value is set
-       * 
-       * @return bool true if Value  is set
-       */
-      public function isSetValue()
-      {
-          return !is_null($this->_fields['Value']['FieldValue']);
-      }
-
+    /**
+     * Set the value of condition, return this.
+     *
+     * @param condition
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withcondition($value)
+    {
+        $this->setcondition($value);
+        return $this;
+    }
 
 }

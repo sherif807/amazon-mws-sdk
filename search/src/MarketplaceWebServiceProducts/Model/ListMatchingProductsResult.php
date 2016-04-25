@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_ListMatchingProductsResult
@@ -31,79 +33,62 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>Products: MarketplaceWebServiceProducts_Model_ProductList</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_ListMatchingProductsResult extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_ListMatchingProductsResult
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Products: MarketplaceWebServiceProducts_Model_ProductList</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_ListMatchingProductsResult extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-
-        'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
-
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Products' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ProductList'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Products.
-     * 
-     * @return ProductList Products
+    /**
+     * Get the value of the Products property.
+     *
+     * @return ProductList Products.
      */
-    public function getProducts() 
+    public function getProducts()
     {
         return $this->_fields['Products']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Products.
-     * 
-     * @param ProductList Products
-     * @return void
+     * Set the value of the Products property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_ProductList products
+     * @return this instance
      */
-    public function setProducts($value) 
+    public function setProducts($value)
     {
         $this->_fields['Products']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the Products  and returns this instance
-     * 
-     * @param ProductList $value Products
-     * @return MarketplaceWebServiceProducts_Model_ListMatchingProductsResult instance
+     * Check to see if Products is set.
+     *
+     * @return true if Products is set.
+     */
+    public function isSetProducts()
+    {
+                return !is_null($this->_fields['Products']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Products, return this.
+     *
+     * @param products
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withProducts($value)
     {
         $this->setProducts($value);
         return $this;
     }
-
-
-    /**
-     * Checks if Products  is set
-     * 
-     * @return bool true if Products property is set
-     */
-    public function isSetProducts()
-    {
-        return !is_null($this->_fields['Products']['FieldValue']);
-
-    }
-
-
-
 
 }

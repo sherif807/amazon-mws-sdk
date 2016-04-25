@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_CompetitivePriceList
@@ -28,88 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>CompetitivePrice: MarketplaceWebServiceProducts_Model_CompetitivePriceType</li>
+ * <li>CompetitivePrice: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_CompetitivePriceList extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_CompetitivePriceList
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>CompetitivePrice: MarketplaceWebServiceProducts_Model_CompetitivePriceType</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_CompetitivePriceList extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'CompetitivePrice' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_CompetitivePriceType')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'CompetitivePrice' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_CompetitivePriceType')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the CompetitivePrice.
-     * 
-     * @return array of CompetitivePriceType CompetitivePrice
+    /**
+     * Get the value of the CompetitivePrice property.
+     *
+     * @return List<CompetitivePriceType> CompetitivePrice.
      */
-    public function getCompetitivePrice() 
+    public function getCompetitivePrice()
     {
+        if ($this->_fields['CompetitivePrice']['FieldValue'] == null)
+        {
+            $this->_fields['CompetitivePrice']['FieldValue'] = array();
+        }
         return $this->_fields['CompetitivePrice']['FieldValue'];
     }
 
     /**
-     * Sets the value of the CompetitivePrice.
-     * 
-     * @param mixed CompetitivePriceType or an array of CompetitivePriceType CompetitivePrice
+     * Set the value of the CompetitivePrice property.
+     *
+     * @param array competitivePrice
      * @return this instance
      */
-    public function setCompetitivePrice($competitivePrice) 
+    public function setCompetitivePrice($value)
     {
-        if (!$this->_isNumericArray($competitivePrice)) {
-            $competitivePrice =  array ($competitivePrice);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['CompetitivePrice']['FieldValue'] = $competitivePrice;
+        $this->_fields['CompetitivePrice']['FieldValue'] = $value;
         return $this;
     }
 
-
     /**
-     * Sets single or multiple values of CompetitivePrice list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withCompetitivePrice($competitivePrice1, $competitivePrice2)</code>
-     * 
-     * @param CompetitivePriceType  $competitivePriceTypeArgs one or more CompetitivePrice
-     * @return MarketplaceWebServiceProducts_Model_CompetitivePriceList  instance
+     * Clear CompetitivePrice.
      */
-    public function withCompetitivePrice($competitivePriceTypeArgs)
+    public function unsetCompetitivePrice()
     {
-        foreach (func_get_args() as $competitivePrice) {
-            $this->_fields['CompetitivePrice']['FieldValue'][] = $competitivePrice;
-        }
-        return $this;
-    }   
-
-
+        $this->_fields['CompetitivePrice']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if CompetitivePrice list is non-empty
-     * 
-     * @return bool true if CompetitivePrice list is non-empty
+     * Check to see if CompetitivePrice is set.
+     *
+     * @return true if CompetitivePrice is set.
      */
     public function isSetCompetitivePrice()
     {
-        return count ($this->_fields['CompetitivePrice']['FieldValue']) > 0;
+                return !empty($this->_fields['CompetitivePrice']['FieldValue']);
+            }
+
+    /**
+     * Add values for CompetitivePrice, return this.
+     *
+     * @param competitivePrice
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withCompetitivePrice()
+    {
+        foreach (func_get_args() as $CompetitivePrice)
+        {
+            $this->_fields['CompetitivePrice']['FieldValue'][] = $CompetitivePrice;
+        }
+        return $this;
     }
-
-
-
 
 }

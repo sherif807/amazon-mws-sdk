@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_IdentifierType
@@ -32,63 +34,58 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>SKUIdentifier: MarketplaceWebServiceProducts_Model_SellerSKUIdentifier</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_IdentifierType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_IdentifierType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>MarketplaceASIN: MarketplaceWebServiceProducts_Model_ASINIdentifier</li>
-     * <li>SKUIdentifier: MarketplaceWebServiceProducts_Model_SellerSKUIdentifier</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_IdentifierType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-
-        'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINIdentifier'),
-
-
-        'SKUIdentifier' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerSKUIdentifier'),
-
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'MarketplaceASIN' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ASINIdentifier'),
+    'SKUIdentifier' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_SellerSKUIdentifier'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the MarketplaceASIN.
-     * 
-     * @return ASINIdentifier MarketplaceASIN
+    /**
+     * Get the value of the MarketplaceASIN property.
+     *
+     * @return ASINIdentifier MarketplaceASIN.
      */
-    public function getMarketplaceASIN() 
+    public function getMarketplaceASIN()
     {
         return $this->_fields['MarketplaceASIN']['FieldValue'];
     }
 
     /**
-     * Sets the value of the MarketplaceASIN.
-     * 
-     * @param ASINIdentifier MarketplaceASIN
-     * @return void
+     * Set the value of the MarketplaceASIN property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_ASINIdentifier marketplaceASIN
+     * @return this instance
      */
-    public function setMarketplaceASIN($value) 
+    public function setMarketplaceASIN($value)
     {
         $this->_fields['MarketplaceASIN']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the MarketplaceASIN  and returns this instance
-     * 
-     * @param ASINIdentifier $value MarketplaceASIN
-     * @return MarketplaceWebServiceProducts_Model_IdentifierType instance
+     * Check to see if MarketplaceASIN is set.
+     *
+     * @return true if MarketplaceASIN is set.
+     */
+    public function isSetMarketplaceASIN()
+    {
+                return !is_null($this->_fields['MarketplaceASIN']['FieldValue']);
+            }
+
+    /**
+     * Set the value of MarketplaceASIN, return this.
+     *
+     * @param marketplaceASIN
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withMarketplaceASIN($value)
     {
@@ -96,65 +93,50 @@ class MarketplaceWebServiceProducts_Model_IdentifierType extends MarketplaceWebS
         return $this;
     }
 
-
     /**
-     * Checks if MarketplaceASIN  is set
-     * 
-     * @return bool true if MarketplaceASIN property is set
+     * Get the value of the SKUIdentifier property.
+     *
+     * @return SellerSKUIdentifier SKUIdentifier.
      */
-    public function isSetMarketplaceASIN()
-    {
-        return !is_null($this->_fields['MarketplaceASIN']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the SKUIdentifier.
-     * 
-     * @return SellerSKUIdentifier SKUIdentifier
-     */
-    public function getSKUIdentifier() 
+    public function getSKUIdentifier()
     {
         return $this->_fields['SKUIdentifier']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SKUIdentifier.
-     * 
-     * @param SellerSKUIdentifier SKUIdentifier
-     * @return void
+     * Set the value of the SKUIdentifier property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_SellerSKUIdentifier skuIdentifier
+     * @return this instance
      */
-    public function setSKUIdentifier($value) 
+    public function setSKUIdentifier($value)
     {
         $this->_fields['SKUIdentifier']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the SKUIdentifier  and returns this instance
-     * 
-     * @param SellerSKUIdentifier $value SKUIdentifier
-     * @return MarketplaceWebServiceProducts_Model_IdentifierType instance
+     * Check to see if SKUIdentifier is set.
+     *
+     * @return true if SKUIdentifier is set.
+     */
+    public function isSetSKUIdentifier()
+    {
+                return !is_null($this->_fields['SKUIdentifier']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SKUIdentifier, return this.
+     *
+     * @param skuIdentifier
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSKUIdentifier($value)
     {
         $this->setSKUIdentifier($value);
         return $this;
     }
-
-
-    /**
-     * Checks if SKUIdentifier  is set
-     * 
-     * @return bool true if SKUIdentifier property is set
-     */
-    public function isSetSKUIdentifier()
-    {
-        return !is_null($this->_fields['SKUIdentifier']['FieldValue']);
-
-    }
-
-
-
 
 }

@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult
@@ -30,67 +32,64 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * 
  * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
  * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
+ * <li>SellerSKU: string</li>
+ * <li>status: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
-     * <li>Error: MarketplaceWebServiceProducts_Model_Error</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-
-        'Product' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Product'),
-
-
-        'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
-
-       'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
-       'status' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Product' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Product'),
+    'Error' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_Error'),
+    'SellerSKU' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'status' => array('FieldValue' => null, 'FieldType' => '@string'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Product.
-     * 
-     * @return Product Product
+    /**
+     * Get the value of the Product property.
+     *
+     * @return Product Product.
      */
-    public function getProduct() 
+    public function getProduct()
     {
         return $this->_fields['Product']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Product.
-     * 
-     * @param Product Product
-     * @return void
+     * Set the value of the Product property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_Product product
+     * @return this instance
      */
-    public function setProduct($value) 
+    public function setProduct($value)
     {
         $this->_fields['Product']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the Product  and returns this instance
-     * 
-     * @param Product $value Product
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult instance
+     * Check to see if Product is set.
+     *
+     * @return true if Product is set.
+     */
+    public function isSetProduct()
+    {
+                return !is_null($this->_fields['Product']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Product, return this.
+     *
+     * @param product
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withProduct($value)
     {
@@ -98,45 +97,45 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if Product  is set
-     * 
-     * @return bool true if Product property is set
+     * Get the value of the Error property.
+     *
+     * @return Error Error.
      */
-    public function isSetProduct()
-    {
-        return !is_null($this->_fields['Product']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the Error.
-     * 
-     * @return Error Error
-     */
-    public function getError() 
+    public function getError()
     {
         return $this->_fields['Error']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Error.
-     * 
-     * @param Error Error
-     * @return void
+     * Set the value of the Error property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_Error error
+     * @return this instance
      */
-    public function setError($value) 
+    public function setError($value)
     {
         $this->_fields['Error']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the Error  and returns this instance
-     * 
-     * @param Error $value Error
-     * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult instance
+     * Check to see if Error is set.
+     *
+     * @return true if Error is set.
+     */
+    public function isSetError()
+    {
+                return !is_null($this->_fields['Error']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Error, return this.
+     *
+     * @param error
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withError($value)
     {
@@ -144,107 +143,96 @@ class MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if Error  is set
-     * 
-     * @return bool true if Error property is set
+     * Get the value of the SellerSKU property.
+     *
+     * @return String SellerSKU.
      */
-    public function isSetError()
+    public function getSellerSKU()
     {
-        return !is_null($this->_fields['Error']['FieldValue']);
-
+        return $this->_fields['SellerSKU']['FieldValue'];
     }
 
+    /**
+     * Set the value of the SellerSKU property.
+     *
+     * @param string sellerSKU
+     * @return this instance
+     */
+    public function setSellerSKU($value)
+    {
+        $this->_fields['SellerSKU']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Gets the value of the SellerSKU attribute.
-       * 
-       * @return string SellerSKU
-       */
-      public function getSellerSKU() 
-      {
-          return $this->_fields['SellerSKU']['FieldValue'];
-      }
+    /**
+     * Check to see if SellerSKU is set.
+     *
+     * @return true if SellerSKU is set.
+     */
+    public function isSetSellerSKU()
+    {
+                return !is_null($this->_fields['SellerSKU']['FieldValue']);
+            }
 
-      /**
-       * Sets the value of the SellerSKU property.
-       * 
-       * @param string SellerSKU
-       * @return this instance
-       */
-      public function setSellerSKU($value) 
-      {
-          $this->_fields['SellerSKU']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of SellerSKU, return this.
+     *
+     * @param sellerSKU
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withSellerSKU($value)
+    {
+        $this->setSellerSKU($value);
+        return $this;
+    }
 
-      /**
-       * Sets the value of the SellerSKU and returns this instance
-       * 
-       * @param string $value SellerSKU
-       * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult instance
-       */
-      public function withSellerSKU($value)
-      {
-          $this->setSellerSKU($value);
-          return $this;
-      }
+    /**
+     * Get the value of the status property.
+     *
+     * @return String status.
+     */
+    public function getstatus()
+    {
+        return $this->_fields['status']['FieldValue'];
+    }
 
+    /**
+     * Set the value of the status property.
+     *
+     * @param string status
+     * @return this instance
+     */
+    public function setstatus($value)
+    {
+        $this->_fields['status']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Checks if SellerSKU is set
-       * 
-       * @return bool true if SellerSKU  is set
-       */
-      public function isSetSellerSKU()
-      {
-          return !is_null($this->_fields['SellerSKU']['FieldValue']);
-      }
-      /**
-       * Gets the value of the status attribute.
-       * 
-       * @return string status
-       */
-      public function getstatus() 
-      {
-          return $this->_fields['status']['FieldValue'];
-      }
+    /**
+     * Check to see if status is set.
+     *
+     * @return true if status is set.
+     */
+    public function isSetstatus()
+    {
+                return !is_null($this->_fields['status']['FieldValue']);
+            }
 
-      /**
-       * Sets the value of the status property.
-       * 
-       * @param string status
-       * @return this instance
-       */
-      public function setstatus($value) 
-      {
-          $this->_fields['status']['FieldValue'] = $value;
-          return $this;
-      }
-
-      /**
-       * Sets the value of the status and returns this instance
-       * 
-       * @param string $value status
-       * @return MarketplaceWebServiceProducts_Model_GetMyPriceForSKUResult instance
-       */
-      public function withstatus($value)
-      {
-          $this->setstatus($value);
-          return $this;
-      }
-
-
-      /**
-       * Checks if status is set
-       * 
-       * @return bool true if status  is set
-       */
-      public function isSetstatus()
-      {
-          return !is_null($this->_fields['status']['FieldValue']);
-      }
-
+    /**
+     * Set the value of status, return this.
+     *
+     * @param status
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withstatus($value)
+    {
+        $this->setstatus($value);
+        return $this;
+    }
 
 }

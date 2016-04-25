@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_MessageList
@@ -28,88 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>Message: MarketplaceWebServiceProducts_Model_Message</li>
+ * <li>Message: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_MessageList extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_MessageList
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Message: MarketplaceWebServiceProducts_Model_Message</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_MessageList extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'Message' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_Message')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Message' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_Message')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Message.
-     * 
-     * @return array of Message Message
+    /**
+     * Get the value of the Message property.
+     *
+     * @return List<Message> Message.
      */
-    public function getMessage() 
+    public function getMessage()
     {
+        if ($this->_fields['Message']['FieldValue'] == null)
+        {
+            $this->_fields['Message']['FieldValue'] = array();
+        }
         return $this->_fields['Message']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Message.
-     * 
-     * @param mixed Message or an array of Message Message
+     * Set the value of the Message property.
+     *
+     * @param array message
      * @return this instance
      */
-    public function setMessage($message) 
+    public function setMessage($value)
     {
-        if (!$this->_isNumericArray($message)) {
-            $message =  array ($message);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['Message']['FieldValue'] = $message;
+        $this->_fields['Message']['FieldValue'] = $value;
         return $this;
     }
 
-
     /**
-     * Sets single or multiple values of Message list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withMessage($message1, $message2)</code>
-     * 
-     * @param Message  $messageArgs one or more Message
-     * @return MarketplaceWebServiceProducts_Model_MessageList  instance
+     * Clear Message.
      */
-    public function withMessage($messageArgs)
+    public function unsetMessage()
     {
-        foreach (func_get_args() as $message) {
-            $this->_fields['Message']['FieldValue'][] = $message;
-        }
-        return $this;
-    }   
-
-
+        $this->_fields['Message']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if Message list is non-empty
-     * 
-     * @return bool true if Message list is non-empty
+     * Check to see if Message is set.
+     *
+     * @return true if Message is set.
      */
     public function isSetMessage()
     {
-        return count ($this->_fields['Message']['FieldValue']) > 0;
+                return !empty($this->_fields['Message']['FieldValue']);
+            }
+
+    /**
+     * Add values for Message, return this.
+     *
+     * @param message
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withMessage()
+    {
+        foreach (func_get_args() as $Message)
+        {
+            $this->_fields['Message']['FieldValue'][] = $Message;
+        }
+        return $this;
     }
-
-
-
 
 }

@@ -25,86 +25,86 @@ require_once (dirname(__FILE__) . '/../Model.php');
 
 
 /**
- * MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult
+ * MarketplaceWebServiceProducts_Model_ErrorDetail
  * 
  * Properties:
  * <ul>
  * 
- * <li>Self: array</li>
+ * <li>Any: array</li>
  *
  * </ul>
  */
 
- class MarketplaceWebServiceProducts_Model_GetProductCategoriesForASINResult extends MarketplaceWebServiceProducts_Model {
+ class MarketplaceWebServiceProducts_Model_ErrorDetail extends MarketplaceWebServiceProducts_Model {
 
     public function __construct($data = null)
     {
     $this->_fields = array (
-    'Self' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_Categories')),
+    'Any' => array('FieldValue' => array(), 'FieldType' => array('object')),
     );
     parent::__construct($data);
     }
 
     /**
-     * Get the value of the Self property.
+     * Get the value of the Any property.
      *
-     * @return List<Categories> Self.
+     * @return List<Object> Any.
      */
-    public function getSelf()
+    public function getAny()
     {
-        if ($this->_fields['Self']['FieldValue'] == null)
+        if ($this->_fields['Any']['FieldValue'] == null)
         {
-            $this->_fields['Self']['FieldValue'] = array();
+            $this->_fields['Any']['FieldValue'] = array();
         }
-        return $this->_fields['Self']['FieldValue'];
+        return $this->_fields['Any']['FieldValue'];
     }
 
     /**
-     * Set the value of the Self property.
+     * Set the value of the Any property.
      *
-     * @param array self
+     * @param array any
      * @return this instance
      */
-    public function setSelf($value)
+    public function setAny($value)
     {
         if (!$this->_isNumericArray($value)) {
             $value = array ($value);
         }
-        $this->_fields['Self']['FieldValue'] = $value;
+        $this->_fields['Any']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Clear Self.
+     * Clear Any.
      */
-    public function unsetSelf()
+    public function unsetAny()
     {
-        $this->_fields['Self']['FieldValue'] = array();
+        $this->_fields['Any']['FieldValue'] = array();
     }
 
     /**
-     * Check to see if Self is set.
+     * Check to see if Any is set.
      *
-     * @return true if Self is set.
+     * @return true if Any is set.
      */
-    public function isSetSelf()
+    public function isSetAny()
     {
-                return !empty($this->_fields['Self']['FieldValue']);
+                return !empty($this->_fields['Any']['FieldValue']);
             }
 
     /**
-     * Add values for Self, return this.
+     * Add values for Any, return this.
      *
-     * @param self
+     * @param any
      *             New values to add.
      *
      * @return This instance.
      */
-    public function withSelf()
+    public function withAny()
     {
-        foreach (func_get_args() as $Self)
+        foreach (func_get_args() as $Any)
         {
-            $this->_fields['Self']['FieldValue'][] = $Self;
+            $this->_fields['Any']['FieldValue'][] = $Any;
         }
         return $this;
     }

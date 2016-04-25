@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_CompetitivePriceType
@@ -30,66 +32,66 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * 
  * <li>CompetitivePriceId: string</li>
  * <li>Price: MarketplaceWebServiceProducts_Model_PriceType</li>
+ * <li>condition: string</li>
+ * <li>subcondition: string</li>
+ * <li>belongsToRequester: bool</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_CompetitivePriceType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>CompetitivePriceId: string</li>
-     * <li>Price: MarketplaceWebServiceProducts_Model_PriceType</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
-
-        'Price' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
-
-       'condition' => array('FieldValue' => null, 'FieldType' => 'string'),
-       'subcondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-       'belongsToRequester' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'CompetitivePriceId' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'Price' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
+    'condition' => array('FieldValue' => null, 'FieldType' => '@string'),
+    'subcondition' => array('FieldValue' => null, 'FieldType' => '@string'),
+    'belongsToRequester' => array('FieldValue' => null, 'FieldType' => '@bool'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the CompetitivePriceId property.
-     * 
-     * @return string CompetitivePriceId
+    /**
+     * Get the value of the CompetitivePriceId property.
+     *
+     * @return String CompetitivePriceId.
      */
-    public function getCompetitivePriceId() 
+    public function getCompetitivePriceId()
     {
         return $this->_fields['CompetitivePriceId']['FieldValue'];
     }
 
     /**
-     * Sets the value of the CompetitivePriceId property.
-     * 
-     * @param string CompetitivePriceId
+     * Set the value of the CompetitivePriceId property.
+     *
+     * @param string competitivePriceId
      * @return this instance
      */
-    public function setCompetitivePriceId($value) 
+    public function setCompetitivePriceId($value)
     {
         $this->_fields['CompetitivePriceId']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the CompetitivePriceId and returns this instance
-     * 
-     * @param string $value CompetitivePriceId
-     * @return MarketplaceWebServiceProducts_Model_CompetitivePriceType instance
+     * Check to see if CompetitivePriceId is set.
+     *
+     * @return true if CompetitivePriceId is set.
+     */
+    public function isSetCompetitivePriceId()
+    {
+                return !is_null($this->_fields['CompetitivePriceId']['FieldValue']);
+            }
+
+    /**
+     * Set the value of CompetitivePriceId, return this.
+     *
+     * @param competitivePriceId
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withCompetitivePriceId($value)
     {
@@ -97,44 +99,45 @@ class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends Marketpla
         return $this;
     }
 
-
     /**
-     * Checks if CompetitivePriceId is set
-     * 
-     * @return bool true if CompetitivePriceId  is set
+     * Get the value of the Price property.
+     *
+     * @return PriceType Price.
      */
-    public function isSetCompetitivePriceId()
-    {
-        return !is_null($this->_fields['CompetitivePriceId']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the Price.
-     * 
-     * @return PriceType Price
-     */
-    public function getPrice() 
+    public function getPrice()
     {
         return $this->_fields['Price']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Price.
-     * 
-     * @param PriceType Price
-     * @return void
+     * Set the value of the Price property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_PriceType price
+     * @return this instance
      */
-    public function setPrice($value) 
+    public function setPrice($value)
     {
         $this->_fields['Price']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the Price  and returns this instance
-     * 
-     * @param PriceType $value Price
-     * @return MarketplaceWebServiceProducts_Model_CompetitivePriceType instance
+     * Check to see if Price is set.
+     *
+     * @return true if Price is set.
+     */
+    public function isSetPrice()
+    {
+                return !is_null($this->_fields['Price']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Price, return this.
+     *
+     * @param price
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withPrice($value)
     {
@@ -142,151 +145,152 @@ class MarketplaceWebServiceProducts_Model_CompetitivePriceType extends Marketpla
         return $this;
     }
 
-
     /**
-     * Checks if Price  is set
-     * 
-     * @return bool true if Price property is set
+     * Get the value of the condition property.
+     *
+     * @return String condition.
      */
-    public function isSetPrice()
+    public function getcondition()
     {
-        return !is_null($this->_fields['Price']['FieldValue']);
-
+        return $this->_fields['condition']['FieldValue'];
     }
 
+    /**
+     * Set the value of the condition property.
+     *
+     * @param string condition
+     * @return this instance
+     */
+    public function setcondition($value)
+    {
+        $this->_fields['condition']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Gets the value of the condition attribute.
-       * 
-       * @return string condition
-       */
-      public function getcondition() 
-      {
-          return $this->_fields['condition']['FieldValue'];
-      }
+    /**
+     * Check to see if condition is set.
+     *
+     * @return true if condition is set.
+     */
+    public function isSetcondition()
+    {
+                return !is_null($this->_fields['condition']['FieldValue']);
+            }
 
-      /**
-       * Sets the value of the condition property.
-       * 
-       * @param string condition
-       * @return this instance
-       */
-      public function setcondition($value) 
-      {
-          $this->_fields['condition']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of condition, return this.
+     *
+     * @param condition
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withcondition($value)
+    {
+        $this->setcondition($value);
+        return $this;
+    }
 
-      /**
-       * Sets the value of the condition and returns this instance
-       * 
-       * @param string $value condition
-       * @return MarketplaceWebServiceProducts_Model_CompetitivePriceType instance
-       */
-      public function withcondition($value)
-      {
-          $this->setcondition($value);
-          return $this;
-      }
+    /**
+     * Get the value of the subcondition property.
+     *
+     * @return String subcondition.
+     */
+    public function getsubcondition()
+    {
+        return $this->_fields['subcondition']['FieldValue'];
+    }
 
+    /**
+     * Set the value of the subcondition property.
+     *
+     * @param string subcondition
+     * @return this instance
+     */
+    public function setsubcondition($value)
+    {
+        $this->_fields['subcondition']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Checks if condition is set
-       * 
-       * @return bool true if condition  is set
-       */
-      public function isSetcondition()
-      {
-          return !is_null($this->_fields['condition']['FieldValue']);
-      }
-      /**
-       * Gets the value of the subcondition attribute.
-       * 
-       * @return string subcondition
-       */
-      public function getsubcondition() 
-      {
-          return $this->_fields['subcondition']['FieldValue'];
-      }
+    /**
+     * Check to see if subcondition is set.
+     *
+     * @return true if subcondition is set.
+     */
+    public function isSetsubcondition()
+    {
+                return !is_null($this->_fields['subcondition']['FieldValue']);
+            }
 
-      /**
-       * Sets the value of the subcondition property.
-       * 
-       * @param string subcondition
-       * @return this instance
-       */
-      public function setsubcondition($value) 
-      {
-          $this->_fields['subcondition']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Set the value of subcondition, return this.
+     *
+     * @param subcondition
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withsubcondition($value)
+    {
+        $this->setsubcondition($value);
+        return $this;
+    }
 
-      /**
-       * Sets the value of the subcondition and returns this instance
-       * 
-       * @param string $value subcondition
-       * @return MarketplaceWebServiceProducts_Model_CompetitivePriceType instance
-       */
-      public function withsubcondition($value)
-      {
-          $this->setsubcondition($value);
-          return $this;
-      }
+    /**
+     * Check the value of belongsToRequester.
+     *
+     * @return true if belongsToRequester is set to true.
+     */
+    public function isbelongsToRequester()
+    {
+        return !is_null($this->_fields['belongsToRequester']['FieldValue']) && $this->_fields['belongsToRequester']['FieldValue'];
+    }
 
+    /**
+     * Get the value of the belongsToRequester property.
+     *
+     * @return Boolean belongsToRequester.
+     */
+    public function getbelongsToRequester()
+    {
+        return $this->_fields['belongsToRequester']['FieldValue'];
+    }
 
-      /**
-       * Checks if subcondition is set
-       * 
-       * @return bool true if subcondition  is set
-       */
-      public function isSetsubcondition()
-      {
-          return !is_null($this->_fields['subcondition']['FieldValue']);
-      }
-      /**
-       * Gets the value of the belongsToRequester attribute.
-       * 
-       * @return string belongsToRequester
-       */
-      public function getbelongsToRequester() 
-      {
-          return $this->_fields['belongsToRequester']['FieldValue'];
-      }
+    /**
+     * Set the value of the belongsToRequester property.
+     *
+     * @param bool belongsToRequester
+     * @return this instance
+     */
+    public function setbelongsToRequester($value)
+    {
+        $this->_fields['belongsToRequester']['FieldValue'] = $value;
+        return $this;
+    }
 
-      /**
-       * Sets the value of the belongsToRequester property.
-       * 
-       * @param string belongsToRequester
-       * @return this instance
-       */
-      public function setbelongsToRequester($value) 
-      {
-          $this->_fields['belongsToRequester']['FieldValue'] = $value;
-          return $this;
-      }
+    /**
+     * Check to see if belongsToRequester is set.
+     *
+     * @return true if belongsToRequester is set.
+     */
+    public function isSetbelongsToRequester()
+    {
+                return !is_null($this->_fields['belongsToRequester']['FieldValue']);
+            }
 
-      /**
-       * Sets the value of the belongsToRequester and returns this instance
-       * 
-       * @param string $value belongsToRequester
-       * @return MarketplaceWebServiceProducts_Model_CompetitivePriceType instance
-       */
-      public function withbelongsToRequester($value)
-      {
-          $this->setbelongsToRequester($value);
-          return $this;
-      }
-
-
-      /**
-       * Checks if belongsToRequester is set
-       * 
-       * @return bool true if belongsToRequester  is set
-       */
-      public function isSetbelongsToRequester()
-      {
-          return !is_null($this->_fields['belongsToRequester']['FieldValue']);
-      }
-
+    /**
+     * Set the value of belongsToRequester, return this.
+     *
+     * @param belongsToRequester
+     *             The new value to set.
+     *
+     * @return This instance.
+     */
+    public function withbelongsToRequester($value)
+    {
+        $this->setbelongsToRequester($value);
+        return $this;
+    }
 
 }

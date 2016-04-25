@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_CompetitivePricingType
@@ -33,67 +35,59 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>TradeInValue: MarketplaceWebServiceProducts_Model_MoneyType</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_CompetitivePricingType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>CompetitivePrices: MarketplaceWebServiceProducts_Model_CompetitivePriceList</li>
-     * <li>NumberOfOfferListings: MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList</li>
-     * <li>TradeInValue: MarketplaceWebServiceProducts_Model_MoneyType</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-
-        'CompetitivePrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_CompetitivePriceList'),
-
-
-        'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList'),
-
-
-        'TradeInValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
-
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'CompetitivePrices' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_CompetitivePriceList'),
+    'NumberOfOfferListings' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList'),
+    'TradeInValue' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_MoneyType'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the CompetitivePrices.
-     * 
-     * @return CompetitivePriceList CompetitivePrices
+    /**
+     * Get the value of the CompetitivePrices property.
+     *
+     * @return CompetitivePriceList CompetitivePrices.
      */
-    public function getCompetitivePrices() 
+    public function getCompetitivePrices()
     {
         return $this->_fields['CompetitivePrices']['FieldValue'];
     }
 
     /**
-     * Sets the value of the CompetitivePrices.
-     * 
-     * @param CompetitivePriceList CompetitivePrices
-     * @return void
+     * Set the value of the CompetitivePrices property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_CompetitivePriceList competitivePrices
+     * @return this instance
      */
-    public function setCompetitivePrices($value) 
+    public function setCompetitivePrices($value)
     {
         $this->_fields['CompetitivePrices']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the CompetitivePrices  and returns this instance
-     * 
-     * @param CompetitivePriceList $value CompetitivePrices
-     * @return MarketplaceWebServiceProducts_Model_CompetitivePricingType instance
+     * Check to see if CompetitivePrices is set.
+     *
+     * @return true if CompetitivePrices is set.
+     */
+    public function isSetCompetitivePrices()
+    {
+                return !is_null($this->_fields['CompetitivePrices']['FieldValue']);
+            }
+
+    /**
+     * Set the value of CompetitivePrices, return this.
+     *
+     * @param competitivePrices
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withCompetitivePrices($value)
     {
@@ -101,45 +95,45 @@ class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if CompetitivePrices  is set
-     * 
-     * @return bool true if CompetitivePrices property is set
+     * Get the value of the NumberOfOfferListings property.
+     *
+     * @return NumberOfOfferListingsList NumberOfOfferListings.
      */
-    public function isSetCompetitivePrices()
-    {
-        return !is_null($this->_fields['CompetitivePrices']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the NumberOfOfferListings.
-     * 
-     * @return NumberOfOfferListingsList NumberOfOfferListings
-     */
-    public function getNumberOfOfferListings() 
+    public function getNumberOfOfferListings()
     {
         return $this->_fields['NumberOfOfferListings']['FieldValue'];
     }
 
     /**
-     * Sets the value of the NumberOfOfferListings.
-     * 
-     * @param NumberOfOfferListingsList NumberOfOfferListings
-     * @return void
+     * Set the value of the NumberOfOfferListings property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList numberOfOfferListings
+     * @return this instance
      */
-    public function setNumberOfOfferListings($value) 
+    public function setNumberOfOfferListings($value)
     {
         $this->_fields['NumberOfOfferListings']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the NumberOfOfferListings  and returns this instance
-     * 
-     * @param NumberOfOfferListingsList $value NumberOfOfferListings
-     * @return MarketplaceWebServiceProducts_Model_CompetitivePricingType instance
+     * Check to see if NumberOfOfferListings is set.
+     *
+     * @return true if NumberOfOfferListings is set.
+     */
+    public function isSetNumberOfOfferListings()
+    {
+                return !is_null($this->_fields['NumberOfOfferListings']['FieldValue']);
+            }
+
+    /**
+     * Set the value of NumberOfOfferListings, return this.
+     *
+     * @param numberOfOfferListings
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withNumberOfOfferListings($value)
     {
@@ -147,65 +141,50 @@ class MarketplaceWebServiceProducts_Model_CompetitivePricingType extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if NumberOfOfferListings  is set
-     * 
-     * @return bool true if NumberOfOfferListings property is set
+     * Get the value of the TradeInValue property.
+     *
+     * @return MoneyType TradeInValue.
      */
-    public function isSetNumberOfOfferListings()
-    {
-        return !is_null($this->_fields['NumberOfOfferListings']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the TradeInValue.
-     * 
-     * @return MoneyType TradeInValue
-     */
-    public function getTradeInValue() 
+    public function getTradeInValue()
     {
         return $this->_fields['TradeInValue']['FieldValue'];
     }
 
     /**
-     * Sets the value of the TradeInValue.
-     * 
-     * @param MoneyType TradeInValue
-     * @return void
+     * Set the value of the TradeInValue property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_MoneyType tradeInValue
+     * @return this instance
      */
-    public function setTradeInValue($value) 
+    public function setTradeInValue($value)
     {
         $this->_fields['TradeInValue']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the TradeInValue  and returns this instance
-     * 
-     * @param MoneyType $value TradeInValue
-     * @return MarketplaceWebServiceProducts_Model_CompetitivePricingType instance
+     * Check to see if TradeInValue is set.
+     *
+     * @return true if TradeInValue is set.
+     */
+    public function isSetTradeInValue()
+    {
+                return !is_null($this->_fields['TradeInValue']['FieldValue']);
+            }
+
+    /**
+     * Set the value of TradeInValue, return this.
+     *
+     * @param tradeInValue
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withTradeInValue($value)
     {
         $this->setTradeInValue($value);
         return $this;
     }
-
-
-    /**
-     * Checks if TradeInValue  is set
-     * 
-     * @return bool true if TradeInValue property is set
-     */
-    public function isSetTradeInValue()
-    {
-        return !is_null($this->_fields['TradeInValue']['FieldValue']);
-
-    }
-
-
-
 
 }

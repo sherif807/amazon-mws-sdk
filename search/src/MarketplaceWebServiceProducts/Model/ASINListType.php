@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_ASINListType
@@ -28,87 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>ASIN: string</li>
+ * <li>ASIN: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_ASINListType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_ASINListType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>ASIN: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_ASINListType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'ASIN' => array('FieldValue' => array(), 'FieldType' => array('string')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'ASIN' => array('FieldValue' => array(), 'FieldType' => array('string')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the ASIN .
-     * 
-     * @return array of string ASIN
+    /**
+     * Get the value of the ASIN property.
+     *
+     * @return List<String> ASIN.
      */
-    public function getASIN() 
+    public function getASIN()
     {
+        if ($this->_fields['ASIN']['FieldValue'] == null)
+        {
+            $this->_fields['ASIN']['FieldValue'] = array();
+        }
         return $this->_fields['ASIN']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ASIN.
-     * 
-     * @param string or an array of string ASIN
+     * Set the value of the ASIN property.
+     *
+     * @param array asin
      * @return this instance
      */
-    public function setASIN($ASIN) 
+    public function setASIN($value)
     {
-        if (!$this->_isNumericArray($ASIN)) {
-            $ASIN =  array ($ASIN);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['ASIN']['FieldValue'] = $ASIN;
+        $this->_fields['ASIN']['FieldValue'] = $value;
         return $this;
     }
-  
 
     /**
-     * Sets single or multiple values of ASIN list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withASIN($ASIN1, $ASIN2)</code>
-     * 
-     * @param string  $stringArgs one or more ASIN
-     * @return MarketplaceWebServiceProducts_Model_ASINListType  instance
+     * Clear ASIN.
      */
-    public function withASIN($stringArgs)
+    public function unsetASIN()
     {
-        foreach (func_get_args() as $ASIN) {
-            $this->_fields['ASIN']['FieldValue'][] = $ASIN;
-        }
-        return $this;
-    }  
-      
+        $this->_fields['ASIN']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if ASIN list is non-empty
-     * 
-     * @return bool true if ASIN list is non-empty
+     * Check to see if ASIN is set.
+     *
+     * @return true if ASIN is set.
      */
     public function isSetASIN()
     {
-        return count ($this->_fields['ASIN']['FieldValue']) > 0;
+                return !empty($this->_fields['ASIN']['FieldValue']);
+            }
+
+    /**
+     * Add values for ASIN, return this.
+     *
+     * @param asin
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withASIN()
+    {
+        foreach (func_get_args() as $ASIN)
+        {
+            $this->_fields['ASIN']['FieldValue'][] = $ASIN;
+        }
+        return $this;
     }
-
-
-
 
 }

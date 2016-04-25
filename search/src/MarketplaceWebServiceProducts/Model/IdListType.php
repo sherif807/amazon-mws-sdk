@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_IdListType
@@ -28,87 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>Id: string</li>
+ * <li>Id: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_IdListType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_IdListType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Id: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_IdListType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Id' => array('FieldValue' => array(), 'FieldType' => array('string')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Id .
-     * 
-     * @return array of string Id
+    /**
+     * Get the value of the Id property.
+     *
+     * @return List<String> Id.
      */
-    public function getId() 
+    public function getId()
     {
+        if ($this->_fields['Id']['FieldValue'] == null)
+        {
+            $this->_fields['Id']['FieldValue'] = array();
+        }
         return $this->_fields['Id']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Id.
-     * 
-     * @param string or an array of string Id
+     * Set the value of the Id property.
+     *
+     * @param array id
      * @return this instance
      */
-    public function setId($id) 
+    public function setId($value)
     {
-        if (!$this->_isNumericArray($id)) {
-            $id =  array ($id);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['Id']['FieldValue'] = $id;
+        $this->_fields['Id']['FieldValue'] = $value;
         return $this;
     }
-  
 
     /**
-     * Sets single or multiple values of Id list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withId($id1, $id2)</code>
-     * 
-     * @param string  $stringArgs one or more Id
-     * @return MarketplaceWebServiceProducts_Model_IdListType  instance
+     * Clear Id.
      */
-    public function withId($stringArgs)
+    public function unsetId()
     {
-        foreach (func_get_args() as $id) {
-            $this->_fields['Id']['FieldValue'][] = $id;
-        }
-        return $this;
-    }  
-      
+        $this->_fields['Id']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if Id list is non-empty
-     * 
-     * @return bool true if Id list is non-empty
+     * Check to see if Id is set.
+     *
+     * @return true if Id is set.
      */
     public function isSetId()
     {
-        return count ($this->_fields['Id']['FieldValue']) > 0;
+                return !empty($this->_fields['Id']['FieldValue']);
+            }
+
+    /**
+     * Add values for Id, return this.
+     *
+     * @param id
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withId()
+    {
+        foreach (func_get_args() as $Id)
+        {
+            $this->_fields['Id']['FieldValue'][] = $Id;
+        }
+        return $this;
     }
-
-
-
 
 }

@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList
@@ -28,88 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>OfferListingCount: MarketplaceWebServiceProducts_Model_OfferListingCountType</li>
+ * <li>OfferListingCount: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>OfferListingCount: MarketplaceWebServiceProducts_Model_OfferListingCountType</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferListingCountType')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'OfferListingCount' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferListingCountType')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the OfferListingCount.
-     * 
-     * @return array of OfferListingCountType OfferListingCount
+    /**
+     * Get the value of the OfferListingCount property.
+     *
+     * @return List<OfferListingCountType> OfferListingCount.
      */
-    public function getOfferListingCount() 
+    public function getOfferListingCount()
     {
+        if ($this->_fields['OfferListingCount']['FieldValue'] == null)
+        {
+            $this->_fields['OfferListingCount']['FieldValue'] = array();
+        }
         return $this->_fields['OfferListingCount']['FieldValue'];
     }
 
     /**
-     * Sets the value of the OfferListingCount.
-     * 
-     * @param mixed OfferListingCountType or an array of OfferListingCountType OfferListingCount
+     * Set the value of the OfferListingCount property.
+     *
+     * @param array offerListingCount
      * @return this instance
      */
-    public function setOfferListingCount($offerListingCount) 
+    public function setOfferListingCount($value)
     {
-        if (!$this->_isNumericArray($offerListingCount)) {
-            $offerListingCount =  array ($offerListingCount);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['OfferListingCount']['FieldValue'] = $offerListingCount;
+        $this->_fields['OfferListingCount']['FieldValue'] = $value;
         return $this;
     }
 
-
     /**
-     * Sets single or multiple values of OfferListingCount list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withOfferListingCount($offerListingCount1, $offerListingCount2)</code>
-     * 
-     * @param OfferListingCountType  $offerListingCountTypeArgs one or more OfferListingCount
-     * @return MarketplaceWebServiceProducts_Model_NumberOfOfferListingsList  instance
+     * Clear OfferListingCount.
      */
-    public function withOfferListingCount($offerListingCountTypeArgs)
+    public function unsetOfferListingCount()
     {
-        foreach (func_get_args() as $offerListingCount) {
-            $this->_fields['OfferListingCount']['FieldValue'][] = $offerListingCount;
-        }
-        return $this;
-    }   
-
-
+        $this->_fields['OfferListingCount']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if OfferListingCount list is non-empty
-     * 
-     * @return bool true if OfferListingCount list is non-empty
+     * Check to see if OfferListingCount is set.
+     *
+     * @return true if OfferListingCount is set.
      */
     public function isSetOfferListingCount()
     {
-        return count ($this->_fields['OfferListingCount']['FieldValue']) > 0;
+                return !empty($this->_fields['OfferListingCount']['FieldValue']);
+            }
+
+    /**
+     * Add values for OfferListingCount, return this.
+     *
+     * @param offerListingCount
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withOfferListingCount()
+    {
+        foreach (func_get_args() as $OfferListingCount)
+        {
+            $this->_fields['OfferListingCount']['FieldValue'][] = $OfferListingCount;
+        }
+        return $this;
     }
-
-
-
 
 }

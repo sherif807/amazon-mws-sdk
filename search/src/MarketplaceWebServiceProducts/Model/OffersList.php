@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_OffersList
@@ -28,88 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>Offer: MarketplaceWebServiceProducts_Model_OfferType</li>
+ * <li>Offer: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_OffersList extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_OffersList
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Offer: MarketplaceWebServiceProducts_Model_OfferType</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_OffersList extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'Offer' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferType')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Offer' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_OfferType')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Offer.
-     * 
-     * @return array of OfferType Offer
+    /**
+     * Get the value of the Offer property.
+     *
+     * @return List<OfferType> Offer.
      */
-    public function getOffer() 
+    public function getOffer()
     {
+        if ($this->_fields['Offer']['FieldValue'] == null)
+        {
+            $this->_fields['Offer']['FieldValue'] = array();
+        }
         return $this->_fields['Offer']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Offer.
-     * 
-     * @param mixed OfferType or an array of OfferType Offer
+     * Set the value of the Offer property.
+     *
+     * @param array offer
      * @return this instance
      */
-    public function setOffer($offer) 
+    public function setOffer($value)
     {
-        if (!$this->_isNumericArray($offer)) {
-            $offer =  array ($offer);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['Offer']['FieldValue'] = $offer;
+        $this->_fields['Offer']['FieldValue'] = $value;
         return $this;
     }
 
-
     /**
-     * Sets single or multiple values of Offer list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withOffer($offer1, $offer2)</code>
-     * 
-     * @param OfferType  $offerTypeArgs one or more Offer
-     * @return MarketplaceWebServiceProducts_Model_OffersList  instance
+     * Clear Offer.
      */
-    public function withOffer($offerTypeArgs)
+    public function unsetOffer()
     {
-        foreach (func_get_args() as $offer) {
-            $this->_fields['Offer']['FieldValue'][] = $offer;
-        }
-        return $this;
-    }   
-
-
+        $this->_fields['Offer']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if Offer list is non-empty
-     * 
-     * @return bool true if Offer list is non-empty
+     * Check to see if Offer is set.
+     *
+     * @return true if Offer is set.
      */
     public function isSetOffer()
     {
-        return count ($this->_fields['Offer']['FieldValue']) > 0;
+                return !empty($this->_fields['Offer']['FieldValue']);
+            }
+
+    /**
+     * Add values for Offer, return this.
+     *
+     * @param offer
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withOffer()
+    {
+        foreach (func_get_args() as $Offer)
+        {
+            $this->_fields['Offer']['FieldValue'][] = $Offer;
+        }
+        return $this;
     }
-
-
-
 
 }

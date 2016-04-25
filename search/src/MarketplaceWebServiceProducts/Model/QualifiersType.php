@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_QualifiersType
@@ -36,69 +38,62 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>SellerPositiveFeedbackRating: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_QualifiersType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>ItemCondition: string</li>
-     * <li>ItemSubcondition: string</li>
-     * <li>FulfillmentChannel: string</li>
-     * <li>ShipsDomestically: string</li>
-     * <li>ShippingTime: MarketplaceWebServiceProducts_Model_ShippingTimeType</li>
-     * <li>SellerPositiveFeedbackRating: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ItemSubcondition' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
-        'ShipsDomestically' => array('FieldValue' => null, 'FieldType' => 'string'),
-
-        'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShippingTimeType'),
-
-        'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'ItemCondition' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'ItemSubcondition' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'FulfillmentChannel' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'ShipsDomestically' => array('FieldValue' => null, 'FieldType' => 'string'),
+    'ShippingTime' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_ShippingTimeType'),
+    'SellerPositiveFeedbackRating' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the ItemCondition property.
-     * 
-     * @return string ItemCondition
+    /**
+     * Get the value of the ItemCondition property.
+     *
+     * @return String ItemCondition.
      */
-    public function getItemCondition() 
+    public function getItemCondition()
     {
         return $this->_fields['ItemCondition']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ItemCondition property.
-     * 
-     * @param string ItemCondition
+     * Set the value of the ItemCondition property.
+     *
+     * @param string itemCondition
      * @return this instance
      */
-    public function setItemCondition($value) 
+    public function setItemCondition($value)
     {
         $this->_fields['ItemCondition']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the ItemCondition and returns this instance
-     * 
-     * @param string $value ItemCondition
-     * @return MarketplaceWebServiceProducts_Model_QualifiersType instance
+     * Check to see if ItemCondition is set.
+     *
+     * @return true if ItemCondition is set.
+     */
+    public function isSetItemCondition()
+    {
+                return !is_null($this->_fields['ItemCondition']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ItemCondition, return this.
+     *
+     * @param itemCondition
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withItemCondition($value)
     {
@@ -106,44 +101,45 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebS
         return $this;
     }
 
-
     /**
-     * Checks if ItemCondition is set
-     * 
-     * @return bool true if ItemCondition  is set
+     * Get the value of the ItemSubcondition property.
+     *
+     * @return String ItemSubcondition.
      */
-    public function isSetItemCondition()
-    {
-        return !is_null($this->_fields['ItemCondition']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the ItemSubcondition property.
-     * 
-     * @return string ItemSubcondition
-     */
-    public function getItemSubcondition() 
+    public function getItemSubcondition()
     {
         return $this->_fields['ItemSubcondition']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ItemSubcondition property.
-     * 
-     * @param string ItemSubcondition
+     * Set the value of the ItemSubcondition property.
+     *
+     * @param string itemSubcondition
      * @return this instance
      */
-    public function setItemSubcondition($value) 
+    public function setItemSubcondition($value)
     {
         $this->_fields['ItemSubcondition']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the ItemSubcondition and returns this instance
-     * 
-     * @param string $value ItemSubcondition
-     * @return MarketplaceWebServiceProducts_Model_QualifiersType instance
+     * Check to see if ItemSubcondition is set.
+     *
+     * @return true if ItemSubcondition is set.
+     */
+    public function isSetItemSubcondition()
+    {
+                return !is_null($this->_fields['ItemSubcondition']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ItemSubcondition, return this.
+     *
+     * @param itemSubcondition
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withItemSubcondition($value)
     {
@@ -151,44 +147,45 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebS
         return $this;
     }
 
-
     /**
-     * Checks if ItemSubcondition is set
-     * 
-     * @return bool true if ItemSubcondition  is set
+     * Get the value of the FulfillmentChannel property.
+     *
+     * @return String FulfillmentChannel.
      */
-    public function isSetItemSubcondition()
-    {
-        return !is_null($this->_fields['ItemSubcondition']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the FulfillmentChannel property.
-     * 
-     * @return string FulfillmentChannel
-     */
-    public function getFulfillmentChannel() 
+    public function getFulfillmentChannel()
     {
         return $this->_fields['FulfillmentChannel']['FieldValue'];
     }
 
     /**
-     * Sets the value of the FulfillmentChannel property.
-     * 
-     * @param string FulfillmentChannel
+     * Set the value of the FulfillmentChannel property.
+     *
+     * @param string fulfillmentChannel
      * @return this instance
      */
-    public function setFulfillmentChannel($value) 
+    public function setFulfillmentChannel($value)
     {
         $this->_fields['FulfillmentChannel']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the FulfillmentChannel and returns this instance
-     * 
-     * @param string $value FulfillmentChannel
-     * @return MarketplaceWebServiceProducts_Model_QualifiersType instance
+     * Check to see if FulfillmentChannel is set.
+     *
+     * @return true if FulfillmentChannel is set.
+     */
+    public function isSetFulfillmentChannel()
+    {
+                return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
+            }
+
+    /**
+     * Set the value of FulfillmentChannel, return this.
+     *
+     * @param fulfillmentChannel
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withFulfillmentChannel($value)
     {
@@ -196,44 +193,45 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebS
         return $this;
     }
 
-
     /**
-     * Checks if FulfillmentChannel is set
-     * 
-     * @return bool true if FulfillmentChannel  is set
+     * Get the value of the ShipsDomestically property.
+     *
+     * @return String ShipsDomestically.
      */
-    public function isSetFulfillmentChannel()
-    {
-        return !is_null($this->_fields['FulfillmentChannel']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the ShipsDomestically property.
-     * 
-     * @return string ShipsDomestically
-     */
-    public function getShipsDomestically() 
+    public function getShipsDomestically()
     {
         return $this->_fields['ShipsDomestically']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ShipsDomestically property.
-     * 
-     * @param string ShipsDomestically
+     * Set the value of the ShipsDomestically property.
+     *
+     * @param string shipsDomestically
      * @return this instance
      */
-    public function setShipsDomestically($value) 
+    public function setShipsDomestically($value)
     {
         $this->_fields['ShipsDomestically']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the ShipsDomestically and returns this instance
-     * 
-     * @param string $value ShipsDomestically
-     * @return MarketplaceWebServiceProducts_Model_QualifiersType instance
+     * Check to see if ShipsDomestically is set.
+     *
+     * @return true if ShipsDomestically is set.
+     */
+    public function isSetShipsDomestically()
+    {
+                return !is_null($this->_fields['ShipsDomestically']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ShipsDomestically, return this.
+     *
+     * @param shipsDomestically
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withShipsDomestically($value)
     {
@@ -241,44 +239,45 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebS
         return $this;
     }
 
-
     /**
-     * Checks if ShipsDomestically is set
-     * 
-     * @return bool true if ShipsDomestically  is set
+     * Get the value of the ShippingTime property.
+     *
+     * @return ShippingTimeType ShippingTime.
      */
-    public function isSetShipsDomestically()
-    {
-        return !is_null($this->_fields['ShipsDomestically']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the ShippingTime.
-     * 
-     * @return ShippingTimeType ShippingTime
-     */
-    public function getShippingTime() 
+    public function getShippingTime()
     {
         return $this->_fields['ShippingTime']['FieldValue'];
     }
 
     /**
-     * Sets the value of the ShippingTime.
-     * 
-     * @param ShippingTimeType ShippingTime
-     * @return void
+     * Set the value of the ShippingTime property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_ShippingTimeType shippingTime
+     * @return this instance
      */
-    public function setShippingTime($value) 
+    public function setShippingTime($value)
     {
         $this->_fields['ShippingTime']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the ShippingTime  and returns this instance
-     * 
-     * @param ShippingTimeType $value ShippingTime
-     * @return MarketplaceWebServiceProducts_Model_QualifiersType instance
+     * Check to see if ShippingTime is set.
+     *
+     * @return true if ShippingTime is set.
+     */
+    public function isSetShippingTime()
+    {
+                return !is_null($this->_fields['ShippingTime']['FieldValue']);
+            }
+
+    /**
+     * Set the value of ShippingTime, return this.
+     *
+     * @param shippingTime
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withShippingTime($value)
     {
@@ -286,64 +285,50 @@ class MarketplaceWebServiceProducts_Model_QualifiersType extends MarketplaceWebS
         return $this;
     }
 
-
     /**
-     * Checks if ShippingTime  is set
-     * 
-     * @return bool true if ShippingTime property is set
+     * Get the value of the SellerPositiveFeedbackRating property.
+     *
+     * @return String SellerPositiveFeedbackRating.
      */
-    public function isSetShippingTime()
-    {
-        return !is_null($this->_fields['ShippingTime']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the SellerPositiveFeedbackRating property.
-     * 
-     * @return string SellerPositiveFeedbackRating
-     */
-    public function getSellerPositiveFeedbackRating() 
+    public function getSellerPositiveFeedbackRating()
     {
         return $this->_fields['SellerPositiveFeedbackRating']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerPositiveFeedbackRating property.
-     * 
-     * @param string SellerPositiveFeedbackRating
+     * Set the value of the SellerPositiveFeedbackRating property.
+     *
+     * @param string sellerPositiveFeedbackRating
      * @return this instance
      */
-    public function setSellerPositiveFeedbackRating($value) 
+    public function setSellerPositiveFeedbackRating($value)
     {
         $this->_fields['SellerPositiveFeedbackRating']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerPositiveFeedbackRating and returns this instance
-     * 
-     * @param string $value SellerPositiveFeedbackRating
-     * @return MarketplaceWebServiceProducts_Model_QualifiersType instance
+     * Check to see if SellerPositiveFeedbackRating is set.
+     *
+     * @return true if SellerPositiveFeedbackRating is set.
+     */
+    public function isSetSellerPositiveFeedbackRating()
+    {
+                return !is_null($this->_fields['SellerPositiveFeedbackRating']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerPositiveFeedbackRating, return this.
+     *
+     * @param sellerPositiveFeedbackRating
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerPositiveFeedbackRating($value)
     {
         $this->setSellerPositiveFeedbackRating($value);
         return $this;
     }
-
-
-    /**
-     * Checks if SellerPositiveFeedbackRating is set
-     * 
-     * @return bool true if SellerPositiveFeedbackRating  is set
-     */
-    public function isSetSellerPositiveFeedbackRating()
-    {
-        return !is_null($this->_fields['SellerPositiveFeedbackRating']['FieldValue']);
-    }
-
-
-
 
 }

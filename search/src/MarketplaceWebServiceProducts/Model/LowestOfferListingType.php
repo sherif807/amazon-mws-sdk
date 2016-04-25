@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_LowestOfferListingType
@@ -35,69 +37,61 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * <li>MultipleOffersAtLowestPrice: string</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_LowestOfferListingType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Qualifiers: MarketplaceWebServiceProducts_Model_QualifiersType</li>
-     * <li>NumberOfOfferListingsConsidered: int</li>
-     * <li>SellerFeedbackCount: int</li>
-     * <li>Price: MarketplaceWebServiceProducts_Model_PriceType</li>
-     * <li>MultipleOffersAtLowestPrice: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-
-        'Qualifiers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_QualifiersType'),
-
-        'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
-        'SellerFeedbackCount' => array('FieldValue' => null, 'FieldType' => 'int'),
-
-        'Price' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
-
-        'MultipleOffersAtLowestPrice' => array('FieldValue' => null, 'FieldType' => 'string'),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Qualifiers' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_QualifiersType'),
+    'NumberOfOfferListingsConsidered' => array('FieldValue' => null, 'FieldType' => 'int'),
+    'SellerFeedbackCount' => array('FieldValue' => null, 'FieldType' => 'int'),
+    'Price' => array('FieldValue' => null, 'FieldType' => 'MarketplaceWebServiceProducts_Model_PriceType'),
+    'MultipleOffersAtLowestPrice' => array('FieldValue' => null, 'FieldType' => 'string'),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Qualifiers.
-     * 
-     * @return QualifiersType Qualifiers
+    /**
+     * Get the value of the Qualifiers property.
+     *
+     * @return QualifiersType Qualifiers.
      */
-    public function getQualifiers() 
+    public function getQualifiers()
     {
         return $this->_fields['Qualifiers']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Qualifiers.
-     * 
-     * @param QualifiersType Qualifiers
-     * @return void
+     * Set the value of the Qualifiers property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_QualifiersType qualifiers
+     * @return this instance
      */
-    public function setQualifiers($value) 
+    public function setQualifiers($value)
     {
         $this->_fields['Qualifiers']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the Qualifiers  and returns this instance
-     * 
-     * @param QualifiersType $value Qualifiers
-     * @return MarketplaceWebServiceProducts_Model_LowestOfferListingType instance
+     * Check to see if Qualifiers is set.
+     *
+     * @return true if Qualifiers is set.
+     */
+    public function isSetQualifiers()
+    {
+                return !is_null($this->_fields['Qualifiers']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Qualifiers, return this.
+     *
+     * @param qualifiers
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withQualifiers($value)
     {
@@ -105,45 +99,45 @@ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if Qualifiers  is set
-     * 
-     * @return bool true if Qualifiers property is set
+     * Get the value of the NumberOfOfferListingsConsidered property.
+     *
+     * @return Integer NumberOfOfferListingsConsidered.
      */
-    public function isSetQualifiers()
-    {
-        return !is_null($this->_fields['Qualifiers']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the NumberOfOfferListingsConsidered property.
-     * 
-     * @return int NumberOfOfferListingsConsidered
-     */
-    public function getNumberOfOfferListingsConsidered() 
+    public function getNumberOfOfferListingsConsidered()
     {
         return $this->_fields['NumberOfOfferListingsConsidered']['FieldValue'];
     }
 
     /**
-     * Sets the value of the NumberOfOfferListingsConsidered property.
-     * 
-     * @param int NumberOfOfferListingsConsidered
+     * Set the value of the NumberOfOfferListingsConsidered property.
+     *
+     * @param int numberOfOfferListingsConsidered
      * @return this instance
      */
-    public function setNumberOfOfferListingsConsidered($value) 
+    public function setNumberOfOfferListingsConsidered($value)
     {
         $this->_fields['NumberOfOfferListingsConsidered']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the NumberOfOfferListingsConsidered and returns this instance
-     * 
-     * @param int $value NumberOfOfferListingsConsidered
-     * @return MarketplaceWebServiceProducts_Model_LowestOfferListingType instance
+     * Check to see if NumberOfOfferListingsConsidered is set.
+     *
+     * @return true if NumberOfOfferListingsConsidered is set.
+     */
+    public function isSetNumberOfOfferListingsConsidered()
+    {
+                return !is_null($this->_fields['NumberOfOfferListingsConsidered']['FieldValue']);
+            }
+
+    /**
+     * Set the value of NumberOfOfferListingsConsidered, return this.
+     *
+     * @param numberOfOfferListingsConsidered
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withNumberOfOfferListingsConsidered($value)
     {
@@ -151,44 +145,45 @@ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if NumberOfOfferListingsConsidered is set
-     * 
-     * @return bool true if NumberOfOfferListingsConsidered  is set
+     * Get the value of the SellerFeedbackCount property.
+     *
+     * @return int SellerFeedbackCount.
      */
-    public function isSetNumberOfOfferListingsConsidered()
-    {
-        return !is_null($this->_fields['NumberOfOfferListingsConsidered']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the SellerFeedbackCount property.
-     * 
-     * @return int SellerFeedbackCount
-     */
-    public function getSellerFeedbackCount() 
+    public function getSellerFeedbackCount()
     {
         return $this->_fields['SellerFeedbackCount']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerFeedbackCount property.
-     * 
-     * @param int SellerFeedbackCount
+     * Set the value of the SellerFeedbackCount property.
+     *
+     * @param int sellerFeedbackCount
      * @return this instance
      */
-    public function setSellerFeedbackCount($value) 
+    public function setSellerFeedbackCount($value)
     {
         $this->_fields['SellerFeedbackCount']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the SellerFeedbackCount and returns this instance
-     * 
-     * @param int $value SellerFeedbackCount
-     * @return MarketplaceWebServiceProducts_Model_LowestOfferListingType instance
+     * Check to see if SellerFeedbackCount is set.
+     *
+     * @return true if SellerFeedbackCount is set.
+     */
+    public function isSetSellerFeedbackCount()
+    {
+                return !is_null($this->_fields['SellerFeedbackCount']['FieldValue']);
+            }
+
+    /**
+     * Set the value of SellerFeedbackCount, return this.
+     *
+     * @param sellerFeedbackCount
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withSellerFeedbackCount($value)
     {
@@ -196,44 +191,45 @@ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if SellerFeedbackCount is set
-     * 
-     * @return bool true if SellerFeedbackCount  is set
+     * Get the value of the Price property.
+     *
+     * @return PriceType Price.
      */
-    public function isSetSellerFeedbackCount()
-    {
-        return !is_null($this->_fields['SellerFeedbackCount']['FieldValue']);
-    }
-
-    /**
-     * Gets the value of the Price.
-     * 
-     * @return PriceType Price
-     */
-    public function getPrice() 
+    public function getPrice()
     {
         return $this->_fields['Price']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Price.
-     * 
-     * @param PriceType Price
-     * @return void
+     * Set the value of the Price property.
+     *
+     * @param MarketplaceWebServiceProducts_Model_PriceType price
+     * @return this instance
      */
-    public function setPrice($value) 
+    public function setPrice($value)
     {
         $this->_fields['Price']['FieldValue'] = $value;
-        return;
+        return $this;
     }
 
     /**
-     * Sets the value of the Price  and returns this instance
-     * 
-     * @param PriceType $value Price
-     * @return MarketplaceWebServiceProducts_Model_LowestOfferListingType instance
+     * Check to see if Price is set.
+     *
+     * @return true if Price is set.
+     */
+    public function isSetPrice()
+    {
+                return !is_null($this->_fields['Price']['FieldValue']);
+            }
+
+    /**
+     * Set the value of Price, return this.
+     *
+     * @param price
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withPrice($value)
     {
@@ -241,64 +237,50 @@ class MarketplaceWebServiceProducts_Model_LowestOfferListingType extends Marketp
         return $this;
     }
 
-
     /**
-     * Checks if Price  is set
-     * 
-     * @return bool true if Price property is set
+     * Get the value of the MultipleOffersAtLowestPrice property.
+     *
+     * @return String MultipleOffersAtLowestPrice.
      */
-    public function isSetPrice()
-    {
-        return !is_null($this->_fields['Price']['FieldValue']);
-
-    }
-
-    /**
-     * Gets the value of the MultipleOffersAtLowestPrice property.
-     * 
-     * @return string MultipleOffersAtLowestPrice
-     */
-    public function getMultipleOffersAtLowestPrice() 
+    public function getMultipleOffersAtLowestPrice()
     {
         return $this->_fields['MultipleOffersAtLowestPrice']['FieldValue'];
     }
 
     /**
-     * Sets the value of the MultipleOffersAtLowestPrice property.
-     * 
-     * @param string MultipleOffersAtLowestPrice
+     * Set the value of the MultipleOffersAtLowestPrice property.
+     *
+     * @param string multipleOffersAtLowestPrice
      * @return this instance
      */
-    public function setMultipleOffersAtLowestPrice($value) 
+    public function setMultipleOffersAtLowestPrice($value)
     {
         $this->_fields['MultipleOffersAtLowestPrice']['FieldValue'] = $value;
         return $this;
     }
 
     /**
-     * Sets the value of the MultipleOffersAtLowestPrice and returns this instance
-     * 
-     * @param string $value MultipleOffersAtLowestPrice
-     * @return MarketplaceWebServiceProducts_Model_LowestOfferListingType instance
+     * Check to see if MultipleOffersAtLowestPrice is set.
+     *
+     * @return true if MultipleOffersAtLowestPrice is set.
+     */
+    public function isSetMultipleOffersAtLowestPrice()
+    {
+                return !is_null($this->_fields['MultipleOffersAtLowestPrice']['FieldValue']);
+            }
+
+    /**
+     * Set the value of MultipleOffersAtLowestPrice, return this.
+     *
+     * @param multipleOffersAtLowestPrice
+     *             The new value to set.
+     *
+     * @return This instance.
      */
     public function withMultipleOffersAtLowestPrice($value)
     {
         $this->setMultipleOffersAtLowestPrice($value);
         return $this;
     }
-
-
-    /**
-     * Checks if MultipleOffersAtLowestPrice is set
-     * 
-     * @return bool true if MultipleOffersAtLowestPrice  is set
-     */
-    public function isSetMultipleOffersAtLowestPrice()
-    {
-        return !is_null($this->_fields['MultipleOffersAtLowestPrice']['FieldValue']);
-    }
-
-
-
 
 }

@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_ProductList
@@ -28,88 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
+ * <li>Product: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_ProductList extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_ProductList
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>Product: MarketplaceWebServiceProducts_Model_Product</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_ProductList extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'Product' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_Product')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'Product' => array('FieldValue' => array(), 'FieldType' => array('MarketplaceWebServiceProducts_Model_Product')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the Product.
-     * 
-     * @return array of Product Product
+    /**
+     * Get the value of the Product property.
+     *
+     * @return List<Product> Product.
      */
-    public function getProduct() 
+    public function getProduct()
     {
+        if ($this->_fields['Product']['FieldValue'] == null)
+        {
+            $this->_fields['Product']['FieldValue'] = array();
+        }
         return $this->_fields['Product']['FieldValue'];
     }
 
     /**
-     * Sets the value of the Product.
-     * 
-     * @param mixed Product or an array of Product Product
+     * Set the value of the Product property.
+     *
+     * @param array product
      * @return this instance
      */
-    public function setProduct($product) 
+    public function setProduct($value)
     {
-        if (!$this->_isNumericArray($product)) {
-            $product =  array ($product);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['Product']['FieldValue'] = $product;
+        $this->_fields['Product']['FieldValue'] = $value;
         return $this;
     }
 
-
     /**
-     * Sets single or multiple values of Product list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withProduct($product1, $product2)</code>
-     * 
-     * @param Product  $productArgs one or more Product
-     * @return MarketplaceWebServiceProducts_Model_ProductList  instance
+     * Clear Product.
      */
-    public function withProduct($productArgs)
+    public function unsetProduct()
     {
-        foreach (func_get_args() as $product) {
-            $this->_fields['Product']['FieldValue'][] = $product;
-        }
-        return $this;
-    }   
-
-
+        $this->_fields['Product']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if Product list is non-empty
-     * 
-     * @return bool true if Product list is non-empty
+     * Check to see if Product is set.
+     *
+     * @return true if Product is set.
      */
     public function isSetProduct()
     {
-        return count ($this->_fields['Product']['FieldValue']) > 0;
+                return !empty($this->_fields['Product']['FieldValue']);
+            }
+
+    /**
+     * Add values for Product, return this.
+     *
+     * @param product
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withProduct()
+    {
+        foreach (func_get_args() as $Product)
+        {
+            $this->_fields['Product']['FieldValue'][] = $Product;
+        }
+        return $this;
     }
-
-
-
 
 }

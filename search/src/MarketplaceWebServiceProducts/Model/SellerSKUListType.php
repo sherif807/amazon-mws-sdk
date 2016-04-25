@@ -1,26 +1,28 @@
 <?php
-/** 
- *  PHP Version 5
+/*******************************************************************************
+ * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
- *  @category    Amazon
- *  @package     MarketplaceWebServiceProducts
- *  @copyright   Copyright 2008-2012 Amazon.com, Inc. or its affiliates. All Rights Reserved.
- *  @link        http://aws.amazon.com
- *  @license     http://aws.amazon.com/apache2.0  Apache License, Version 2.0
- *  @version     2011-10-01
- */
-/******************************************************************************* 
- * 
- *  Marketplace Web Service Products PHP5 Library
- * 
+ * You may not use this file except in compliance with the License. 
+ * You may obtain a copy of the License at: http://aws.amazon.com/apache2.0
+ * This file is distributed on an "AS IS" BASIS, WITHOUT WARRANTIES OR 
+ * CONDITIONS OF ANY KIND, either express or implied. See the License for the 
+ * specific language governing permissions and limitations under the License.
+ *******************************************************************************
+ * PHP Version 5
+ * @category Amazon
+ * @package  Marketplace Web Service Products
+ * @version  2011-10-01
+ * Library Version: 2014-10-20
+ * Generated: Fri Oct 17 17:59:56 GMT 2014
  */
 
 /**
  *  @see MarketplaceWebServiceProducts_Model
  */
-require_once ('MarketplaceWebServiceProducts/Model.php');  
 
-    
+require_once (dirname(__FILE__) . '/../Model.php');
+
 
 /**
  * MarketplaceWebServiceProducts_Model_SellerSKUListType
@@ -28,87 +30,83 @@ require_once ('MarketplaceWebServiceProducts/Model.php');
  * Properties:
  * <ul>
  * 
- * <li>SellerSKU: string</li>
+ * <li>SellerSKU: array</li>
  *
  * </ul>
- */ 
-class MarketplaceWebServiceProducts_Model_SellerSKUListType extends MarketplaceWebServiceProducts_Model
-{
+ */
 
-    /**
-     * Construct new MarketplaceWebServiceProducts_Model_SellerSKUListType
-     * 
-     * @param mixed $data DOMElement or Associative Array to construct from. 
-     * 
-     * Valid properties:
-     * <ul>
-     * 
-     * <li>SellerSKU: string</li>
-     *
-     * </ul>
-     */
+ class MarketplaceWebServiceProducts_Model_SellerSKUListType extends MarketplaceWebServiceProducts_Model {
+
     public function __construct($data = null)
     {
-        $this->_fields = array (
-        'SellerSKU' => array('FieldValue' => array(), 'FieldType' => array('string')),
-        );
-        parent::__construct($data);
+    $this->_fields = array (
+    'SellerSKU' => array('FieldValue' => array(), 'FieldType' => array('string')),
+    );
+    parent::__construct($data);
     }
 
-        /**
-     * Gets the value of the SellerSKU .
-     * 
-     * @return array of string SellerSKU
+    /**
+     * Get the value of the SellerSKU property.
+     *
+     * @return List<String> SellerSKU.
      */
-    public function getSellerSKU() 
+    public function getSellerSKU()
     {
+        if ($this->_fields['SellerSKU']['FieldValue'] == null)
+        {
+            $this->_fields['SellerSKU']['FieldValue'] = array();
+        }
         return $this->_fields['SellerSKU']['FieldValue'];
     }
 
     /**
-     * Sets the value of the SellerSKU.
-     * 
-     * @param string or an array of string SellerSKU
+     * Set the value of the SellerSKU property.
+     *
+     * @param array sellerSKU
      * @return this instance
      */
-    public function setSellerSKU($sellerSKU) 
+    public function setSellerSKU($value)
     {
-        if (!$this->_isNumericArray($sellerSKU)) {
-            $sellerSKU =  array ($sellerSKU);    
+        if (!$this->_isNumericArray($value)) {
+            $value = array ($value);
         }
-        $this->_fields['SellerSKU']['FieldValue'] = $sellerSKU;
+        $this->_fields['SellerSKU']['FieldValue'] = $value;
         return $this;
     }
-  
 
     /**
-     * Sets single or multiple values of SellerSKU list via variable number of arguments. 
-     * For example, to set the list with two elements, simply pass two values as arguments to this function
-     * <code>withSellerSKU($sellerSKU1, $sellerSKU2)</code>
-     * 
-     * @param string  $stringArgs one or more SellerSKU
-     * @return MarketplaceWebServiceProducts_Model_SellerSKUListType  instance
+     * Clear SellerSKU.
      */
-    public function withSellerSKU($stringArgs)
+    public function unsetSellerSKU()
     {
-        foreach (func_get_args() as $sellerSKU) {
-            $this->_fields['SellerSKU']['FieldValue'][] = $sellerSKU;
-        }
-        return $this;
-    }  
-      
+        $this->_fields['SellerSKU']['FieldValue'] = array();
+    }
 
     /**
-     * Checks if SellerSKU list is non-empty
-     * 
-     * @return bool true if SellerSKU list is non-empty
+     * Check to see if SellerSKU is set.
+     *
+     * @return true if SellerSKU is set.
      */
     public function isSetSellerSKU()
     {
-        return count ($this->_fields['SellerSKU']['FieldValue']) > 0;
+                return !empty($this->_fields['SellerSKU']['FieldValue']);
+            }
+
+    /**
+     * Add values for SellerSKU, return this.
+     *
+     * @param sellerSKU
+     *             New values to add.
+     *
+     * @return This instance.
+     */
+    public function withSellerSKU()
+    {
+        foreach (func_get_args() as $SellerSKU)
+        {
+            $this->_fields['SellerSKU']['FieldValue'][] = $SellerSKU;
+        }
+        return $this;
     }
-
-
-
 
 }
