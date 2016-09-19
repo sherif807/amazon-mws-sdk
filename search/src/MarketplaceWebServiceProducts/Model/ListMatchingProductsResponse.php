@@ -1,6 +1,6 @@
 <?php
 /*******************************************************************************
- * Copyright 2009-2014 Amazon Services. All Rights Reserved.
+ * Copyright 2009-2016 Amazon Services. All Rights Reserved.
  * Licensed under the Apache License, Version 2.0 (the "License"); 
  *
  * You may not use this file except in compliance with the License. 
@@ -13,8 +13,8 @@
  * @category Amazon
  * @package  Marketplace Web Service Products
  * @version  2011-10-01
- * Library Version: 2014-10-20
- * Generated: Fri Oct 17 17:59:56 GMT 2014
+ * Library Version: 2016-06-01
+ * Generated: Fri Sep 16 11:49:32 PDT 2016
  */
 
 /**
@@ -196,17 +196,13 @@ require_once (dirname(__FILE__) . '/../Model.php');
      */
     public static function fromXML($xml)
     {
-        //libxml_use_internal_errors(true);
         $dom = new DOMDocument();
-        @$dom->loadXML($xml);
+        $dom->loadXML($xml);
         $xpath = new DOMXPath($dom);
         $response = $xpath->query("//*[local-name()='ListMatchingProductsResponse']");
         if ($response->length == 1) {
             return new MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse(($response->item(0))); 
         } else {
-            //Sherif:: I changed this because some xml was returning with bad ending and I had no controll
-            //other than to send it and then skip it in capturecontroller
-            return new MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse(($response->item(0))); 
             throw new Exception ("Unable to construct MarketplaceWebServiceProducts_Model_ListMatchingProductsResponse from provided XML. 
                                   Make sure that ListMatchingProductsResponse is a root element");
         }
